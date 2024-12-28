@@ -32,15 +32,8 @@ A Flask-based backend API for a softphone application that supports voice calls,
 
 3. Install dependencies:
    ```bash
-    TWILIO_ACCOUNT_SID=your_account_sid
-    TWILIO_AUTH_TOKEN=your_auth_token
-    TWILIO_PHONE_NUMBER=your_twilio_phone_number
-    API_USERNAME=your_api_username
-    API_PASSWORD=your_api_password
-  ```
-  ```bash
    pip install -r requirements.txt
-  ```
+    ```
 
 5. Create a `.env` file with your credentials:
    ```bash
