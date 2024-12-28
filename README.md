@@ -9,7 +9,7 @@ A modern web-based softphone application built with Python, Flask, and Twilio. T
 - **Real-time Updates**: Instant display of incoming messages and call status
 - **Audio Device Management**: Select and manage your audio input/output devices
 - **Event Logging**: Comprehensive logging of all communication events
-- **Endpoint Security**: Generates JWT Token for authorization.
+- **Endpoint Security**: Utilizes JWT Token for authorization.
 
 ## Project Structure
 
