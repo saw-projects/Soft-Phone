@@ -1,1 +1,119 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Softphone - Voice & SMS</title>
+    <link rel="stylesheet" href="static/site.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Softphone Dashboard</h1>
+      <button id="startup-button">Connect Device</button>
+      <div id="connection-status" class="hide">
+        <span id="client-name"></span>
+      </div>
+    </header>
 
+    <main id="controls">
+      <div class="tab-container">
+        <div class="tabs">
+          <button class="tab-button active" data-tab="calls">Voice Calls</button>
+          <button class="tab-button" data-tab="messages">Messages</button>
+        </div>
+
+        <div class="tab-content">
+          <!-- Calls Tab -->
+          <div id="calls" class="tab-panel active">
+            <div class="panel-content">
+              <div id="call-status"></div>
+              
+              <!-- Outgoing Calls -->
+              <div id="outgoing-call-controls" class="call-section hide">
+                <h3>Make a Call</h3>
+                <form id="call-form">
+                  <div class="input-group">
+                    <label for="phone-number">Phone Number</label>
+                    <input id="phone-number" type="text" placeholder="+1234567890" />
+                  </div>
+                  <button id="button-call" type="submit" class="primary-button">Make Call</button>
+                </form>
+                <button id="button-hangup-outgoing" class="danger-button hide">End Call</button>
+              </div>
+
+              <!-- Incoming Calls -->
+              <div id="incoming-call-controls" class="call-section hide">
+                <h3>Incoming Call</h3>
+                <p class="incoming-info">
+                  From: <span id="incoming-number"></span>
+                </p>
+                <div class="button-group">
+                  <button id="button-accept-incoming" class="success-button">Accept</button>
+                  <button id="button-reject-incoming" class="danger-button">Reject</button>
+                </div>
+                <button id="button-hangup-incoming" class="danger-button hide">End Call</button>
+              </div>
+
+              <!-- Device Settings -->
+              <div id="device-settings" class="settings-section hide">
+                <h3>Audio Settings</h3>
+                <div class="input-group">
+                  <label>Speaker</label>
+                  <select id="speaker-devices"></select>
+                </div>
+                <div class="input-group">
+                  <label>Microphone</label>
+                  <select id="microphone-devices"></select>
+                </div>
+                <button id="get-devices" class="secondary-button">Refresh Devices</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Messages Tab -->
+          <div id="messages" class="tab-panel">
+            <div class="panel-content">
+              <!-- Message Composition -->
+              <div class="message-compose">
+                <h3>Send Message</h3>
+                <form id="sms-form">
+                  <div class="input-group">
+                    <label for="sms-number">To:</label>
+                    <input id="sms-number" type="text" placeholder="+1234567890" required />
+                  </div>
+                  <div class="input-group">
+                    <label for="sms-message">Message:</label>
+                    <textarea id="sms-message" required></textarea>
+                  </div>
+                  <div class="message-type">
+                    <label class="radio-label">
+                      <input type="radio" name="message-type" value="sms" checked> SMS
+                    </label>
+                    <label class="radio-label">
+                      <input type="radio" name="message-type" value="whatsapp"> WhatsApp
+                    </label>
+                  </div>
+                  <button type="submit" class="primary-button">Send</button>
+                </form>
+              </div>
+
+              <!-- Message History -->
+              <div class="message-history">
+                <h3>Message History</h3>
+                <div id="message-history"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Event Log -->
+      <div class="event-log">
+        <h3>Event Log</h3>
+        <div id="log" class="hide"></div>
+      </div>
+    </main>
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script type="text/javascript" src="static/twilio.min.js"></script>
+    <script src="static/softphone.js"></script>
+  </body>
+</html>
