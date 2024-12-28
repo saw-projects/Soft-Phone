@@ -2,6 +2,8 @@
 
 Flask-based backend server for the Softphone application, handling Twilio integration, real-time events, and communication logging.
 
+There is modified user-interface based off of the backend provide by Twilio at https://github.com/TwilioDevEd/voice-javascript-sdk-quickstart-python?tab=readme-ov-file. The modified user interface is very basic and only for testing. A more complete and robust user interface is in progress, and can be found in the frontend folder.
+
 ## Setup
 
 1. Create and activate a virtual environment:
