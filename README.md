@@ -1,6 +1,6 @@
 # Softphone Application
 
-A modern web-based softphone application built with Python, Flask, and Twilio. This application allows you to make and receive voice calls, as well as send and receive SMS/WhatsApp messages through a clean web interface.
+A web-based softphone application built with Python, Flask, and Twilio. This application allows you to make and receive voice calls, as well as send and receive SMS/WhatsApp messages through a web interface.
 
 ## Features
 
@@ -13,10 +13,7 @@ A modern web-based softphone application built with Python, Flask, and Twilio. T
 
 ## Project Structure
 
-- `backend/`: Flask server and Twilio integration
-- `backend/static/`: Frontend assets and JavaScript
-- `backend/templates/`: HTML templates
-- `backend/event_logger.py`: Event logging system
+- `backend/`: in construction
 
 ## Getting Started
 
@@ -34,11 +31,10 @@ A modern web-based softphone application built with Python, Flask, and Twilio. T
 
 ## Development
 
-- Backend: Python 3.x with Flask
-- Frontend: HTML5, CSS3, JavaScript with jQuery
-- Real-time: Server-Sent Events (SSE)
+- Backend: Python, Flask, WebHooks
+- Frontend: HTML5, CSS3, JavaScript
 - Communication: Twilio Voice and Messaging APIs
 
-## License
+## Credit
 
-MIT License
+- This project has used and modified code examples provided by Twilio as part of their SDK.
